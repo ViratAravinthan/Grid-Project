@@ -1,0 +1,89 @@
+  <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+
+        </Grid.RowDefinitions>
+        <Label Content="                                                           REGISTRATION" Margin="0,10,0,0" FontWeight="Bold"  Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="20"></Label>
+        <Label Content="                            Name" Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" FontSize="18"></Label>
+        <TextBox Grid.Column="1" Margin="50,0,350,0" Grid.Row="2" Height="30" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="                               Age" FontSize="18" Margin="0,40,0,0" Grid.RowSpan="3"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="30" Margin="50,42,350,0" Grid.RowSpan="2"/>
+        <Label Content="                               Skill" Grid.Row="4" FontSize="18"></Label>
+        <StackPanel Grid.Row="4" Grid.Column="1" Margin="50,5,252,0" Orientation="Horizontal">
+            <CheckBox Content="C#" x:Name="chkc"  Checked="chkc_Checked" Unchecked="chkc_Unchecked" FontSize="18" ></CheckBox>
+            <CheckBox Content="JAVA" x:Name="chkjava" Checked="CheckBox_Checked"  Unchecked="CheckBox_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="E#" x:Name="chke" Checked="chke_Checked" Unchecked="chke_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="Python" x:Name="chkpython" Checked="chkpython_Checked" Unchecked="chkpython_Unchecked" FontSize="18"></CheckBox>
+        </StackPanel>
+
+        <Label Grid.Row="5" Content="                            Status" FontSize="18"></Label>
+        <RadioButton Grid.Row="5" Grid.Column="2" x:Name="rbmarried" Checked="rbmarried_Checked" Unchecked="rbmarried_Unchecked" Content="Married" Width="100" Margin="0,5,400,0" FontSize="18"></RadioButton>
+        <RadioButton Grid.Row="5" Grid.Column="1" Width="110" x:Name="rbunmarried" Checked="rbunmarried_Checked" Unchecked="rbunmarried_Unchecked" Content="Unmarried" Margin="0,5,200,0" FontSize="18"></RadioButton>
+        <Label Grid.Row="6" Content="                         Country" FontSize="18"></Label>
+        <StackPanel Grid.Row="6" Grid.Column="1" Margin="50,5,39,0" Orientation="Horizontal">
+            <CheckBox Content="INDIA"  x:Name="chkindia" Checked="chkindia_Checked" Unchecked="chkindia_Unchecked" Height="32" FontSize="18" Width="69" ></CheckBox>
+            <CheckBox Content="PAKISTHAN" x:Name="chkpakisthan" Checked="chkpakisthan_Checked" Unchecked="chkpakisthan_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="U.S.A" x:Name="chkusa" Checked="chkusa_Checked" Unchecked="chkusa_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="AUSTRALIA" x:Name="chkaustralia" Checked="chkaustralia_Checked" Unchecked="chkaustralia_Unchecked" FontSize="18"></CheckBox>
+        </StackPanel>
+        <Label Grid.Row="7" Content="                          Gender" FontSize="18"></Label>
+        <RadioButton Grid.Row="7" Content="Male" x:Name="rbmale" Checked="rbmale_Checked" Unchecked="rbmale_Unchecked" Margin="50,5,0,0" Grid.Column="1" FontSize="18"></RadioButton>
+        <RadioButton Grid.Row="7" Content="Female" Margin="150,5,0,0" x:Name="rbfemale" Checked="rbfemale_Checked" Unchecked="rbfemale_Unchecked" Grid.Column="1" FontSize="18"></RadioButton>
+        <Label Grid.Row="8" Content="        Salary Expectation" FontSize="18"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" Margin="50,5,0,0">
+            <CheckBox Content="1000,0" x:Name="chksale"  Checked="chksale_Checked" Unchecked="chksale_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="1500,0" x:Name="chkamount" Checked="chkamount_Checked"  Unchecked="chkamount_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="2000,0" x:Name="chkcount" Checked="chkcount_Checked" Unchecked="chkcount_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="2500,0" x:Name="chkvalue" Checked="chkvalue_Checked" Unchecked="chkvalue_Unchecked" FontSize="18"></CheckBox>
+        </StackPanel>
+        <Label Content="                   Qulifivation" Grid.Row="9" FontSize="18"></Label>
+        <RadioButton Grid.Row="9" Grid.Column="1" x:Name="rbbe" Checked="rbbe_Checked" Unchecked="rbbe_Unchecked" Margin="50,0,0,0" Content="B.E" FontSize="18"></RadioButton>
+        <RadioButton Grid.Row="9" Grid.Column="1" x:Name="btech" Checked="btech_Checked" Unchecked="btech_Unchecked" Margin="100,0,0,0" Content="B Tech" FontSize="18"></RadioButton>
+        <Label Content="            12th Percentage" Grid.Row="9" FontSize="18" Margin="0,31,0,15" Grid.RowSpan="3"></Label>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="10" Margin="50,5,0,0">
+            <CheckBox Content="50%" x:Name="chkfive" Checked="chkfive_Checked" Unchecked="chkfive_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="70%" x:Name="chkseven" Checked="chkseven_Checked" Unchecked="chkseven_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="80%" x:Name="chkeight" Checked="chkeight_Checked" Unchecked="chkeight_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="90%" x:Name="chknine" Checked="chknine_Checked" Unchecked="chknine_Unchecked" FontSize="18"></CheckBox>
+
+        </StackPanel>
+        <Label Content="                    Experience" Grid.Row="11" FontSize="18"></Label>
+        <RadioButton Grid.Row="11" Grid.Column="1" x:Name="rbthree" Checked="rbthree_Checked" Unchecked="rbthree_Unchecked" Content="3Yrs" Margin="50,0,0,0" FontSize="18"></RadioButton>
+        <RadioButton Grid.Row="11" Grid.Column="1" Margin="120,0,0,0" x:Name="rbsix" Checked="rbsix_Checked" Unchecked="rbsix_Unchecked" Content="5Yrs" FontSize="18"></RadioButton>
+        <Label Content="                   Youe Distict" Grid.Row="12" FontSize="18"></Label>
+        <StackPanel Grid.Row="12" Grid.Column="1" Margin="50,0,0,0" Orientation="Horizontal">
+            <CheckBox Content="Coimbatore" x:Name="chkchennai" Checked="chkchennai_Checked" Unchecked="chkchennai_Unchecked" FontSize="18" ></CheckBox>
+            <CheckBox Content="Chennai" x:Name="chkcoimbatore" Checked="chkcoimbatore_Checked" Unchecked="chkcoimbatore_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="Salem" x:Name="chksalem" Checked="chksalem_Checked" Unchecked="chksalem_Unchecked" FontSize="18"></CheckBox>
+            <CheckBox Content="Trichy" x:Name="chktrichy" Checked="chktrichy_Checked" Unchecked="chktrichy_Unchecked" FontSize="18"></CheckBox>
+        </StackPanel>
+        <Label Grid.Row="13" Content="             Passedout Year" FontSize="18"></Label>
+        <RadioButton Grid.Row="13" Grid.Column="1" x:Name="rbtwenty" Checked="rbtwenty_Checked" Unchecked="rbtwenty_Unchecked" Margin="50,0,0,0" Content="2020" FontSize="18"></RadioButton>
+        <RadioButton Grid.Row="13" Grid.Column="1" Margin="150,0,0,0" x:Name="rbtwo" Checked="rbtwo_Checked" Unchecked="rbtwo_Unchecked" Content="2022" FontSize="18"></RadioButton>
+        <Button Grid.Column="1" Grid.Row="14" Width="100" Content="Register" Background="WhiteSmoke" Margin="0,0,200,0" FontSize="18"></Button>
+        <Button Grid.Column="1" Grid.Row="14" Width="100" Content="Clear" Margin="100,0,0,0" Background="WhiteSmoke" FontSize="18"></Button>
+
+
+
+    </Grid>
+</Window>
