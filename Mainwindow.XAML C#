@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Nested
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder stringBuilder= new StringBuilder();
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int l = 0; l < 3; l++)
+                {
+                    for (int m = 0; m < 4; m++)
+                    {
+                        for (int n = 0; n < 5; n++)
+                        {
+                            stringBuilder.Append(i.ToString());
+                            stringBuilder.Append(l.ToString());
+                            stringBuilder.Append(m.ToString());
+                            stringBuilder.Append(n.ToString());
+                            stringBuilder.AppendLine(",");
+                            lblresult.Content = stringBuilder.ToString();
+                        }
+                    }
+                }
+            }
+        }
+    }
