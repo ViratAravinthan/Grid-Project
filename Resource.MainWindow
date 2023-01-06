@@ -1,0 +1,24 @@
+<Window x:Class="Multiple.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multiple"
+        xmlns:lang="clr-namespace:Multiple.Property"
+        mc:Ignorable="d"
+        Background="SkyBlue"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Height="50" Width="151" Margin="0,20,0,0" FontWeight="Bold" Content="{x:Static lang:Resource.reg}" FontSize="20"></Label>
+        <Label Width="104" Height="30" Margin="0,30,250,0" Content="{x:Static lang:Resource.name}" FontSize="18"></Label>
+        <TextBox Width="200" Height="30" x:Name="txtname" Margin="70,-30,0,0"></TextBox>
+        <Label Width="91" Margin="-30,30,200,0" Height="36" Content="{x:Static lang:Resource.mail}" FontSize="20"></Label>
+        <TextBox Width="200" Margin="70,-40,0,0" x:Name="txtmail" Height="30"></TextBox>
+        <Label Width="115" Height="39" Margin="0,20,270,0" FontSize="20" Content="{x:Static lang:Resource.pass}" ></Label>
+        <PasswordBox Width="200" Height="30" x:Name="pwdpass" Margin="70,-40,0,0"></PasswordBox>
+        <Label Width="100" Height="38" Margin="0,10,230,0" FontSize="20" Content="{x:Static lang:Resource.gen}" ></Label>
+        <RadioButton Width="100" Height="30" x:Name="rbmale" FontSize="20" Margin="0,-30,30,0" Content="{x:Static lang:Resource.male}"></RadioButton>
+        <RadioButton Width="100" Height="24" FontSize="20" x:Name="rbfmale" Margin="130,-35,0,0" Content="{x:Static lang:Resource.fmale}"></RadioButton>
+        <Button Width="200" Height="30" Content="{x:Static lang:Resource.cre}" Background="Yellow" FontSize="20" Margin="70,50,0,0" Click="Button_Click"></Button>
+    </StackPanel>
+</Window>
