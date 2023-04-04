@@ -1,0 +1,73 @@
+using Generic.Agecon;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Xml.Linq;
+
+namespace Generic
+{
+    /// <summary>
+    /// Interaction logic for Price.xaml
+    /// </summary>
+    public partial class Price : Window
+    {
+        List<Product> products = new List<Product>();
+        public Price()
+        {
+            InitializeComponent();
+            products.Add(new Product { Name = "Shoes", ID = "101", Price = "300", Purchase = "100", Rating = "4" });
+            products.Add(new Product { Name = "Tshirt", ID = "102", Price = "200", Purchase = "70", Rating = "3" });
+            products.Add(new Product { Name = "Pants", ID = "103", Price = "500", Purchase = "90", Rating = "4" });
+            products.Add(new Product { Name = "Slipper", ID = "104", Price = "150", Purchase = "70", Rating = "3" });
+            products.Add(new Product { Name = "Earphones", ID = "105", Price = "100", Purchase = "40", Rating = "2" });
+            products.Add(new Product { Name = "HeadBand", ID = "106", Price = "250", Purchase = "50", Rating = "3" });
+            products.Add(new Product { Name = "Bracelet", ID = "107", Price = "400", Purchase = "60", Rating = "3" });
+            products.Add(new Product { Name = "Shirts", ID = "108", Price = "500", Purchase = "80", Rating = "4" });
+            products.Add(new Product { Name = "Bags", ID = "109", Price = "400", Purchase = "70", Rating = "3" });
+            products.Add(new Product { Name = "Jeans", ID = "110", Price = "500", Purchase = "80", Rating = "4" });
+            lsttext.ItemsSource= products;
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var Rate = products.OrderByDescending(x => x.Price).Where(x => x.Name.Contains(txtname.Text) || x.ID.Contains(txtname.Text));
+            lsttext.ItemsSource = Rate;
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var low =  products.OrderBy(x => x.Price).Where(x=>x.Name.Contains(txtname.Text) || x.ID.Contains(txtname.Text));
+            lsttext.ItemsSource = low;
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var high = products.OrderByDescending(x => x.Price).Where(x => x.Name.Contains(txtname.Text) || x.ID.Contains(txtname.Text));
+            lsttext.ItemsSource = high;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtname.Text != "")
+            {
+                var has = products.Where(x => x.Name.Contains(txtname.Text) || x.ID.Contains(txtname.Text));
+                lsttext.ItemsSource = has;
+            }
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var jet = products.OrderBy(x => x.Purchase).Where(x => x.Name.Contains(txtname.Text) || x.ID.Contains(txtname.Text));
+            lsttext.ItemsSource = jet;
+        }
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            lsttext.ItemsSource = products;
+        }
+    }
+}
